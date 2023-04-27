@@ -6,31 +6,24 @@
  */
 
 import React, { useState } from 'react';
-import type {PropsWithChildren} from 'react';
+
 import {
   Button,
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
 
 import {
   Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import udp from 'react-native-udp';
 
 function App(): JSX.Element {
-  const [ip, setIp] = useState('');
+  const [ip, setIp] = useState('13.126.248.48');
   const [port, setPort] = useState('3000');
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -73,22 +66,6 @@ const styles = StyleSheet.create({
     padding: 4,
     borderWidth: 1,
     borderColor: 'black',
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
   },
 });
 
