@@ -50,6 +50,7 @@ function App(): JSX.Element {
   return (
     <SafeAreaView style={backgroundStyle}>
       <View style={{padding: 10, backgroundColor: 'white'}}>
+        <Text>Hermes: {!!global.HermesInternal ? 'enabled' : 'disabled'}</Text>
         <Text>IP</Text>
         <TextInput style={styles.input} value={ip} onChangeText={setIp} />
         <Text>Port</Text>
